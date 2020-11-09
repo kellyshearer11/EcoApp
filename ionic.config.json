@@ -1,0 +1,7 @@
+{
+  "name": "Ecoapp1",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

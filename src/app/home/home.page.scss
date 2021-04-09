@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@800&display=swap');
+
 #container {
   text-align: center;
 
@@ -6,6 +8,7 @@
   right: 0;
   top: 50%;
   transform: translateY(-50%);
+  
 }
 
 #container strong {
@@ -24,4 +27,86 @@
 
 #container a {
   text-decoration: none;
+}
+
+
+ion-slides {
+  height: 40%;
+  width: 90%;
+  background-color:#3be13b;
+  font-weight: bold;
+  border-radius: 50px;
+  
+}
+
+ion-slide {
+  border-radius: 25px;
+}
+
+h1 {
+  font-family: 'Dosis', sans-serif;
+  font-size: 50px;
+  font-weight: 900;
+  color:grey;
+ 
+}
+
+h2 {
+  color:grey;
+  font-family: 'Dosis', sans-serif;
+}
+
+ion-card-subtitle {
+  text-align: center;
+  border-style: solid;
+  padding: 20px;
+  border-radius: 25px;
+  border-color: #3be13b;
+  
+}
+
+ion-icon {
+  padding-left: 20px;
+  width: 30%;
+  height: 40%;
+}
+
+
+ion-card-header.img {
+  size: 90%;
+}
+
+ion-title {
+  background-color:#3be13b;
+  padding: 30px;
+  padding-bottom: 30px;
+  color: white;
+
+}
+
+ion-button {
+  display: flex; 
+  justify-content: center;
+}
+
+#faqs {
+  background-color:#add8e6;
+  height: 40%;
+  width: 90%;
+  font-weight: bold;
+  border-radius: 50px;
+  padding-left: 30px;
+  padding-top: 30px;
+  margin:0 auto;
+}
+
+#faqs p {
+  color:grey;
+}
+
+#faqs ion-button {
+  border-color: blue;
+  color:grey;
+  padding-top: 20px;
+  padding-right: 70px;
 }

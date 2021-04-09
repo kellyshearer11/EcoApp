@@ -1,20 +1,67 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-title>
-      Blank
+      Home
     </ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-searchbar></ion-searchbar>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <img src="assets/FinalGif.gif" alt="eco-logo">
+    </ion-card-header>
+    <ion-card-subtitle>This is an App created to help people
+      understand the concept of recycling in an easy and informative way.
+      Here you can learn how to recycle your waste and where you can recycle
+      in your local area.
+    </ion-card-subtitle>
+  </ion-card>
+
+<br>
+  
+  <ion-slides pager="true">
+    <ion-slide>
+      <h1>Reduce</h1>
+      <ion-icon name="flash"></ion-icon>
+      <br>
+    </ion-slide>
+
+    <ion-slide>
+      <h1>Re-Use</h1>
+      <ion-icon name="refresh"></ion-icon>
+    </ion-slide>
+
+    <ion-slide>
+      <h1>Recycle</h1>
+      <ion-icon name="globe"></ion-icon>
+    </ion-slide>
+  </ion-slides>
+
+  <br>
+
+ <div id="faqs">
+   <h2> Recycling Tips and FAQS</h2>
+   <p> Confused or have a question?</p>
+   <ion-button (click)="ClickMe()" fill="outline" size="large" color="grey">Learn More</ion-button>
+ </div>
+
+  <br>
+ 
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Eco App</ion-title>
+  </ion-toolbar>
+</ion-footer>
+  
+  
 </ion-content>
+
+
+
+

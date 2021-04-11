@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -25,7 +26,7 @@ export class LoginPage implements OnInit {
 
   validationFormUser: FormGroup;
 
-  constructor(private router: Router, public formbuider: FormBuilder, public authservice: AuthService) { }
+  constructor(private router: Router, public formbuider: FormBuilder, public authservice: AuthService,private nav: NavController,) { }
 
   ngOnInit() {
     this.validationFormUser = this.formbuider.group({
@@ -46,10 +47,15 @@ export class LoginPage implements OnInit {
     try{
       this.authservice.loginFireauth(value).then( resp =>{
         console.log(resp);
+        this.router.navigate(['home'])
       })
     }catch(err){
       console.log(err);
     }
+  }
+
+  registerUser(){ 
+    this.nav.navigateForward(['signup'])
   }
 
 }

@@ -31,6 +31,15 @@ const routes: Routes = [
     path: 'games',
     loadChildren: () => import('./games/games.module').then( m => m.GamesPageModule)
   },
+  {
+    path: 'signup',
+    loadChildren: () => import('./signup/signup.module').then( m => m.SignupPageModule)
+  },
+  {
+    path: 'forgotpassword',
+    loadChildren: () => import('./forgotpassword/forgotpassword.module').then( m => m.ForgotpasswordPageModule)
+  },
+  
 ];
 
 @NgModule({

@@ -6,6 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { Router } from '@angular/router';
 
 
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -16,7 +17,8 @@ export class AppComponent {
     private platform: Platform,
     private splashScreen: SplashScreen,
     private router: Router,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
+
   ) {
     this.initializeApp();
   }

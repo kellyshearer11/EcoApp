@@ -13,16 +13,51 @@
     </ion-card-header>
   
     <ion-card-content>
+
+      <form [formGroup]="validationFormUser" (ngSubmit)="LoginUser(validationFormUser.value)">
+
       <ion-item>
-        <ion-input placeholder="username"></ion-input>
+        <ion-input type="text" name="email" formControlName="email" placeholder=" Email" [(ngModle)]="email" required>
+          <ion-icon name="mail-outline"></ion-icon>
+        </ion-input>
       </ion-item>
+
+      <div>
+        <ng-container *ngFor="let validation of validationUserMessage.email">
+              <div class="error_message" *ngIf="validationFormUser.get('email').hasError(validation.type) && (validationFormUser.get('email').dirty || validationFormUser.get('email').touched)">
+                 {{validation.message}}
+              </div>
+        </ng-container>
+    </div>
+
       <br>
       <ion-item>
-        <ion-input placeholder="password" type="password"></ion-input>
+        <ion-input type="password" placeholder=" Password" formControlName="password" type="password" [(ngModle)]="email" required>
+          <ion-icon name="lock-closed-outline"></ion-icon>
+        </ion-input>
       </ion-item>
+
+      <div>
+        <ng-container *ngFor="let validation of validationUserMessage.password">
+             <div class="error_message" *ngIf="validationFormUser.get('password').hasError(validation.type) && (validationFormUser.get('password').dirty || validationFormUser.get('password').touched)">
+                {{validation.message}}
+             </div>
+         </ng-container>
+    </div>
+    
       <br>
-      <ion-button (click)="logMeIn()"> Login </ion-button>
+      <ion-button type="submit" [disabled]="!validationFormUser.valid"> Login </ion-button>
+
+      <ion-button fill="outline" color="dark"> Sign Up </ion-button> 
+
+      <ion-button fill="clear">Forgot Password?</ion-button>
+
+      </form>
     </ion-card-content>
   </ion-card>
+
+  <div class="ion-card-footer">
+    <span>Dont have an account?</span> <button class="ion-no-padding">Sign up</button>
+  </div>
 
 </ion-content>

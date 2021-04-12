@@ -49,6 +49,10 @@ const routes: Routes = [
     path: 'feeds',
     loadChildren: () => import('./feeds/feeds.module').then( m => m.FeedsPageModule)
   },
+  {
+    path: 'education',
+    loadChildren: () => import('./education/education.module').then( m => m.EducationPageModule)
+  },
 
   
 ];

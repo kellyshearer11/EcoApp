@@ -53,6 +53,30 @@ const routes: Routes = [
     path: 'education',
     loadChildren: () => import('./education/education.module').then( m => m.EducationPageModule)
   },
+  {
+    path: 'foodwaste',
+    loadChildren: () => import('./pages/foodwaste/foodwaste.module').then( m => m.FoodwastePageModule)
+  },
+  {
+    path: 'textiles',
+    loadChildren: () => import('./pages/textiles/textiles.module').then( m => m.TextilesPageModule)
+  },
+  {
+    path: 'large-items',
+    loadChildren: () => import('./pages/large-items/large-items.module').then( m => m.LargeItemsPageModule)
+  },
+  {
+    path: 'electronics',
+    loadChildren: () => import('./pages/electronics/electronics.module').then( m => m.ElectronicsPageModule)
+  },
+  {
+    path: 'general-plastic',
+    loadChildren: () => import('./pages/general-plastic/general-plastic.module').then( m => m.GeneralPlasticPageModule)
+  },
+  {
+    path: 'batteries',
+    loadChildren: () => import('./pages/batteries/batteries.module').then( m => m.BatteriesPageModule)
+  },
 
   
 ];

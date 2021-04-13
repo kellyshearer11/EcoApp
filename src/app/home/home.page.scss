@@ -100,6 +100,28 @@ ion-button {
   margin:0 auto;
 }
 
+#socials {
+  background-color:#ffd8a7;
+  height: 40%;
+  width: 90%;
+  font-weight: bold;
+  border-radius: 50px;
+  padding-top: 10px;
+  margin:0 auto;
+  text-align: center;
+  padding: 10px;
+}
+
+#socials h2 {
+  font-family: 'Dosis', sans-serif;
+  font-size: 32px;
+  font-weight: 900;
+  color: black;
+  text-align: center;
+  vertical-align: top;
+  
+}
+
 #faqs p {
   color:grey;
 }
@@ -109,4 +131,11 @@ ion-button {
   color:grey;
   padding-top: 20px;
   padding-right: 70px;
+}
+
+#socials ion-icon {
+  width: 80px;
+  text-align: center;
+  padding-left: 7px;
+  color:black;
 }

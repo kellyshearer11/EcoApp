@@ -7,14 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { LocationsPageRoutingModule } from './locations-routing.module';
 
 import { LocationsPage } from './locations.page';
+import { Geolocation } from '@ionic-native/geolocation/ngx';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    LocationsPageRoutingModule
+    LocationsPageRoutingModule,
   ],
-  declarations: [LocationsPage]
+  declarations: [LocationsPage],
+  providers: [Geolocation]
 })
 export class LocationsPageModule {}

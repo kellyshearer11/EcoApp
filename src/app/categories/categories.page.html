@@ -11,25 +11,47 @@
 
 <ion-content>
 
-  <ion-list>
-    <ion-item routerLink="/batteries">
-      <ion-label>Batteries</ion-label>
-    </ion-item>
-    <ion-item routerLink="/foodwaste">
-      <ion-label>Food waste</ion-label>
-    </ion-item>
-    <ion-item routerLink="/large-items">
-      <ion-label>Large Items</ion-label>
-    </ion-item>
-    <ion-item routerLink="/electronics">
-      <ion-label>Electronics</ion-label>
-    </ion-item>
-    <ion-item routerLink="/general-plastic">
-      <ion-label>General Plastic</ion-label>
-    </ion-item>
-    <ion-item routerLink="/textiles">
-      <ion-label>Textiles</ion-label>
-    </ion-item>
-  </ion-list>
+  <br>
+
+  <h3>Read about these catergories and how to distribute they waste properly</h3>
+
+  <br>
+
+  <div id="buttons">
+
+  <ion-button routerLink="/batteries" size="large" color="medium">Baterries</ion-button>
+
+  <ion-button routerLink="/foodwaste" size="large" color="medium">Food Waste</ion-button>
+
+  <br>
+
+  <ion-button routerLink="/large-items" size="large" color="medium">Large Items</ion-button>
+
+  <ion-button routerLink="/electronics" size="large" color="medium">Electronics</ion-button>
+
+  <br>
+
+  <ion-button routerLink="/general-plastic" size="large" color="medium">General PLastic</ion-button>
+
+  <ion-button routerLink="/textiles" size="large" color="medium">Textiles</ion-button>
+
+</div>
 
 </ion-content>
+
+<script>
+  const searchbar = document.querySelector('ion-searchbar');
+  const items = Array.from(document.querySelector('ion-list').children);
+
+  searchbar.addEventListener('ionInput', handleInput);
+
+  function handleInput(event) {
+    const query = event.target.value.toLowerCase();
+    requestAnimationFrame(() => {
+      items.forEach(item => {
+        const shouldShow = item.textContent.toLowerCase().indexOf(query) > -1;
+        item.style.display = shouldShow ? 'block' : 'none';
+      });
+    });
+  }
+</script>

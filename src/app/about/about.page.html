@@ -10,6 +10,21 @@
 </ion-header>
 <ion-content class="about">
 
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Eco App</ion-card-subtitle>
+      <ion-card-title>About Us</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <img src="assets/logo.png" alt="eco-logo">
+      We are a new innovative business created to educate and entice people
+      to recyle and create a more eco friendly lifestyle. Our objective is to reach our audience
+      though the power of digital technology by creating our mobile app and educational games.
+    </ion-card-content>
+  </ion-card>
+  
+
   <h1>FAQS</h1>
   <h3>Have some questions?</h3>
 
@@ -17,23 +32,67 @@
 
   <ion-button size="large" (click)="showAlert()"color="medium">What is recycling?</ion-button>
 
+  <br>
+
   <ion-button size="large" (click)="showAlert2()" color="medium">What can I put in my food waste bin</ion-button>
+
+  <br>
 
   <ion-button size="large" (click)="showAlert3()" color="medium">What is home composting?</ion-button>
 
+  <br>
+
   <ion-button size="large" (click)="showAlert4()" color="medium">What is going on with the bin charges?</ion-button>
+
+  <br>
 
   <ion-button size="large" (click)="showAlert5()" color="medium">Can I put glass in the recycling bin?</ion-button>
 
+  <br>
+
   <ion-button size="large" (click)="showAlert6()" color="medium">What about empty aerosol cans?</ion-button>
+
+  <br>
 
   <ion-button size="large" (click)="showAlert7()" color="medium">What happens with the contents of my recycling bin?</ion-button>
 
+  <br>
+
   <ion-button size="large" (click)="showAlert8()" color="medium">Where can I dispose hazardous waste?</ion-button>
+
+  <br>
 
   <ion-button size="large" (click)="showAlert9()" color="medium">What do I do with electrical items?</ion-button>
 
  </div>
+
+ <br>
+
+ <mbsc-accordion>
+  <mbsc-card collapsible open>
+      <mbsc-card-header>
+          <mbsc-card-title class="mbsc-bold">Title</mbsc-card-title>
+          <mbsc-card-subtitle>Subtitle</mbsc-card-subtitle>
+      </mbsc-card-header>
+      <mbsc-card-content>
+           Content
+      </mbsc-card-content>
+  </mbsc-card>
+  
+  <mbsc-card collapsible>
+      <mbsc-card-header>
+          <mbsc-card-title class="mbsc-bold">Title 2</mbsc-card-title>
+          <mbsc-card-subtitle>Subtitle</mbsc-card-subtitle>
+      </mbsc-card-header>
+      <mbsc-card-content>
+           Content
+      </mbsc-card-content>
+  </mbsc-card>
+  
+  <!-- ... -->
+</mbsc-accordion>
+
+ 
 
  <ion-footer>
   <ion-toolbar>
@@ -42,3 +101,6 @@
 </ion-footer>
 
 </ion-content>
+
+
+

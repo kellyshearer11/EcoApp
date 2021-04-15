@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { MbscModule } from '@mobiscroll/angular';
 
 
 import { IonicModule } from '@ionic/angular';
@@ -15,6 +16,7 @@ import { AboutPage } from './about.page';
     FormsModule,
     IonicModule,
     AboutPageRoutingModule,
+    MbscModule, 
     
   ],
   declarations: [AboutPage]
